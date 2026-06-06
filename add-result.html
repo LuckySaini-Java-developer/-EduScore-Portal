@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Teacher Portal - Enter Marks</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<div class="mainForm">
+    <h2 class="form-title">Teacher Portal: Entry Student Score</h2>
+    
+    <form action="insert-result.jsp" method="post">
+        
+        <!-- 👤 छात्र की मुख्य जानकारी (यह पूरे चौड़े रहेंगे, ग्रिड से बाहर) -->
+        <label for="rollno">Roll no</label>
+        <input type="number" name="rollno" id="rollno" required>
+        
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+        
+        <hr style="margin: 20px 0; border: 0; border-top: 1px dashed #ccc;">
+        
+        <!-- 📊 🔥 ग्रिड यहाँ से शुरू होगा, सिर्फ 6 विषयों के लिए -->
+        <div class="subjects-grid">
+            <div>
+                <label for="hindi">Hindi</label>
+                <input type="number" name="hindi" id="hindi" required>
+            </div>
+            
+            <div>
+                <label for="english">English</label>
+                <input type="number" name="english" id="english" required>
+            </div>
+            
+            <div>
+                <label for="math">Math</label>
+                <input type="number" name="math" id="math" required>
+            </div>
+            
+            <div>
+                <label for="science">Science</label>
+                <input type="number" name="science" id="science" required>
+            </div>
+            
+            <div>
+                <label for="sst">Social Studies</label>
+                <input type="number" name="sst" id="sst" required>
+            </div>
+            
+            <div>
+                <label for="computer">Computer</label>
+                <input type="number" name="computer" id="computer" required>
+            </div>
+        </div>
+        <!-- 🛑 ग्रिड यहाँ खत्म हुआ -->
+        
+        <input type="submit" class="btn" value="Add Result">
+    </form>
+</div>
+</body>
+</html>

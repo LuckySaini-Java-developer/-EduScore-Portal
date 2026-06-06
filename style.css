@@ -1,0 +1,244 @@
+@charset "UTF-8";
+
+/* 🌎 Universal */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f7f6;
+    font-family: Arial, sans-serif; 
+    margin: 0;
+}
+
+/* 🏢 Header */
+h1 {
+    background-color: #5c97bf;
+    text-align: center;
+    color: white;
+    padding: 15px;
+    margin: 0;
+}
+
+/* 📸 Banner */
+.hero-banner {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 5px;
+}
+
+/* 📦 Container */
+.container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1100px;
+    margin: 10px auto 40px auto;
+    padding: 0 20px;
+}
+
+/* 🗂️ Cards */
+.StudentData, .TeacherData {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    width: 42%;
+}
+
+/* 🏷️ Card Heading */
+h2 {
+    background-color: #5c97bf;
+    text-align: center;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* 📝 Labels */
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 15px;      
+    color: #34495e;
+    margin-top: 12px;
+}
+
+/* ✏️ Inputs */
+input[type="text"], 
+input[type="number"], 
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 🟢 Button */
+.btn {
+    background-color: #27ae60; 
+    color: white;
+    padding: 12px;
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.85; 
+}
+
+/* 👨‍🏫 Form */
+.mainForm {
+    width: 45%;
+    margin: 40px auto;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* 📊 Subjects Grid */
+.subjects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+/* ==========================================
+   🎯 MARKSHEET FIXED DESIGN
+   ========================================== */
+
+/* 📦 Marksheet Card */
+.marksheet-card {
+    width: 65%;
+    margin: 20px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* 🏫 Logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.marksheet-logo {
+    width: 140px;
+}
+
+/* Titles */
+.marksheet-title {
+    text-align: center;
+}
+
+.marksheet-subtitle {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 25px;
+}
+
+/* 📋 Table (FINAL FIX) */
+.marksheet-table {
+    width: 100%;              /* 🔥 MOST IMPORTANT FIX */
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.marksheet-table th,
+.marksheet-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Header Row */
+.table-header {
+    background-color: #bdc3c7;
+    color: #2c3e50;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Left Align */
+.text-left {
+    text-align: left !important;
+}
+
+/* Summary */
+.summary-row {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+.final-status-row {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+/* Status */
+.status-text {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.pass-color {
+    color: #27ae60;
+}
+
+.fail-color {
+    color: #c0392b;
+}
+
+/* 📌 Disclaimer */
+.disclaimer-box {
+    margin-top: 25px;
+    font-size: 11px;
+    border-top: 1px dashed #ccc;
+    padding-top: 15px;
+}
+
+/* Buttons */
+.actions-container {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.btn-inline {
+    display: inline-block;
+    width: 40%;
+    margin-right: 10px;
+}
+
+/* 🖨️ Print */
+@media print {
+    .actions-container, .btn, #print-btn {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+    }
+
+    .marksheet-card {
+        box-shadow: none;
+        width: 100%;
+        margin: 0;
+    }
+}

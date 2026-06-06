@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>EduScore Portal - Home</title>
+<!-- 🔗 आपकी एक्सटर्नल CSS फाइल लिंक की -->
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <!-- 🏢 मुख्य हेडिंग बैनर -->
+    <h1>Welcome to the EduScore Portal</h1>
+    
+    <!-- 📸 आपका नया क्लासरूम/एग्जाम हॉल वाला हीरो बैनर -->
+    <img src="images/EduBanner.jpg" class="hero-banner" alt="Education Banner">
+
+    <!-- 📦 मेन कंटेनर - जो दोनों कार्ड्स को आमने-सामने रखेगा -->
+    <div class="container">
+        
+        <!-- 🎓 1. स्टूडेंट जोन -->
+        <div class="StudentData">
+            <form action="result-display.jsp" method="post">
+                <h2>Student Zone</h2>
+                <p style="text-align: center; color: #7f8c8d; font-size: 14px;">Enter your roll number to view your provisional report card.</p>
+                
+                <!-- 🎯 सबसे ज़रूरी फिक्स: यहाँ name="rollno" बिल्कुल सही सेट है -->
+                <label for="rollno">Roll no</label>
+                <input type="number" name="rollno" id="rollno" placeholder="Enter your rollno" required>
+                
+                <input type="submit" class="btn" value="View Result">       
+            </form>
+        </div>
+
+        <!-- 👨‍🏫 2. टीचर जोन -->
+        <div class="TeacherData">
+            <form action="teacher-login.jsp" method="post">
+                <h2>Teacher Zone</h2>
+                <p style="text-align: center; color: #7f8c8d; font-size: 14px;">Secure faculty gate to upload and manage student marks.</p>
+                
+                <label for="teacher_id">Teacher Id</label>
+                <input type="text" name="teacher_id" id="teacher_id" placeholder="Enter Teacher ID" required>
+                
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter Password" required>
+                
+                <input type="submit" class="btn" value="Login">       
+            </form>
+        </div>
+        
+    </div>
+
+</body>
+</html>
