@@ -1,6 +1,6 @@
 # 🎓 EduScore-Portal - Student Result Management System
 
-![Java](https://shields.io) ![PostgreSQL](https://shields.io) ![Tomcat](https://shields.io)
+### 🛠️ Tech Stack: `Java` | `PostgreSQL` | `Apache Tomcat` | `Eclipse IDE`
 
 EduScore Portal is a secure, role-based student result management web application. It bridges the gap between faculty and students by providing a seamless interface for teachers to upload marks and students to instantly view/print their report cards using unique roll numbers.
 
@@ -94,7 +94,7 @@ EduScore-Portal/
 
 * **Lucky Saini**
 * *Java Developer & Full-Stack Enthusiast* 💻
-* [GitHub Profile](https://github.com/LuckySaini-Java-developer)
+* [GitHub Profile](https://github.com)
 
 ---
 
