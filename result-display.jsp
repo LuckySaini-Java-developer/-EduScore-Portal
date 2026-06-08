@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.sql.*, WEB-INF.classes.DBConnection" %>
+<%@ page import="java.sql.*, DBConnection" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +23,7 @@ PreparedStatement psCheck = null;
 ResultSet rsCheck = null;
 
 try {
-    con = classes.DBConnection.getConnection();
+con = DBConnection.getConnection();
     String checkQuery = "SELECT * FROM student_results WHERE roll_no = ?";
     psCheck = con.prepareStatement(checkQuery);
     psCheck.setLong(1, Long.parseLong(searchRollNo.trim()));
