@@ -48,7 +48,7 @@ try {
             
             <!-- 🏫 1. कॉलेज का लोगो कंटेनर -->
             <div class="logo-container">
-                <img src="images/logo.png" alt="University Logo" class="marksheet-logo">
+            <img src="screenshots/resultlogo.png" alt="Result Logo">
             </div>
             
             <h2 class="marksheet-title">EduScore Portal - Examination Result</h2>
