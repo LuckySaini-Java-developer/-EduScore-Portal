@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.sql.*, WEB-INF.classes.DBConnection" %>
+<%@ page import="java.sql.*, DBConnection" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,7 +55,7 @@ try {
     }
 
     // 3. डेटाबेस कनेक्शन
-    con = classes.DBConnection.getConnection();
+    con = DBConnection.getConnection();
     // 🔥 जादू यहाँ है: INSERT से पहले SELECT करके चेक करना
     String checkQuery = "SELECT roll_no FROM student_results WHERE roll_no = ?";
     psCheck = con.prepareStatement(checkQuery);
