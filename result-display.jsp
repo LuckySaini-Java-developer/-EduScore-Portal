@@ -23,13 +23,7 @@ PreparedStatement psCheck = null;
 ResultSet rsCheck = null;
 
 try {
-    String url = "jdbc:postgresql://localhost:5432/eduscore_db";
-    String unm = "postgres";
-    String pwd = "Lucky@16"; 
-    
-    Class.forName("org.postgresql.Driver");
-    con = DriverManager.getConnection(url, unm, pwd);
-    
+    con = DBConnection.getConnection();
     String checkQuery = "SELECT * FROM student_results WHERE roll_no = ?";
     psCheck = con.prepareStatement(checkQuery);
     psCheck.setLong(1, Long.parseLong(searchRollNo.trim()));
