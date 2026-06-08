@@ -55,13 +55,7 @@ try {
     }
 
     // 3. डेटाबेस कनेक्शन
-    String url = "jdbc:postgresql://localhost:5432/eduscore_db";
-    String unm = "postgres";
-    String pwd = "Lucky@16"; // अपना सही पासवर्ड सुनिश्चित करें
-    
-    Class.forName("org.postgresql.Driver");
-    con = DriverManager.getConnection(url, unm, pwd);
-    
+    con = DBConnection.getConnection(); 
     // 🔥 जादू यहाँ है: INSERT से पहले SELECT करके चेक करना
     String checkQuery = "SELECT roll_no FROM student_results WHERE roll_no = ?";
     psCheck = con.prepareStatement(checkQuery);
