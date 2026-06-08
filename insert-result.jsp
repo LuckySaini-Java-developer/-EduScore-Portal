@@ -55,7 +55,7 @@ try {
     }
 
     // 3. डेटाबेस कनेक्शन
-    con = WEB-INF.classes.DBConnection.getConnection();
+    con = classes.DBConnection.getConnection();
     // 🔥 जादू यहाँ है: INSERT से पहले SELECT करके चेक करना
     String checkQuery = "SELECT roll_no FROM student_results WHERE roll_no = ?";
     psCheck = con.prepareStatement(checkQuery);
