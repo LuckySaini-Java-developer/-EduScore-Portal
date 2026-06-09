@@ -30,7 +30,7 @@ String dbPass = System.getenv("DB_PASSWORD");
 String dbUrl = "jdbc:postgresql://" + dbHost + ":5432/neondb?sslmode=require";
 
 Class.forName("org.postgresql.Driver");
-Connection con = DriverManager.getConnection(dbUrl, dbUser, dbPass);
+con = DriverManager.getConnection(dbUrl, dbUser, dbPass);
     String checkQuery = "SELECT * FROM student_results WHERE roll_no = ?";
     psCheck = con.prepareStatement(checkQuery);
     psCheck.setLong(1, Long.parseLong(searchRollNo.trim()));
