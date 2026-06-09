@@ -1,5 +1,8 @@
 # 🎓 EduScore-Portal - Student Result Management System
 
+### 🌐 Live Demo: [https://eduscore-portal.onrender.com](https://eduscore-portal.onrender.com)
+*(Note: Render ke free tier ki wajah se yeh website pehli baar khulne mein 50-60 seconds ka samay le sakti hai.)*
+
 ### 🛠️ Tech Stack: `Java` | `PostgreSQL` | `Apache Tomcat` | `Eclipse IDE`
 
 EduScore Portal is a secure, role-based student result management web application. It bridges the gap between faculty and students by providing a seamless interface for teachers to upload marks and students to instantly view/print their report cards using unique roll numbers.
