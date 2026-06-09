@@ -23,7 +23,15 @@ PreparedStatement psCheck = null;
 ResultSet rsCheck = null;
 
 try {
-con = DBConnection.getConnection();
+String dbHost = System.getenv("DB_HOST") != null ? System.getenv("DB_HOST") : "ep-shiny-cell-aqt8ekq0.us-east-1.aws.neon.tech";
+String dbUser = System.getenv("DB_USER") != null ? System.getenv("DB_USER") : "neondb_owner";
+String dbPass = System.getenv("DB_PASSWORD") != null ? System.getenv("DB_PASSWORD") : "npg_GNghWla4brC6";
+
+String dbUrl = "jdbc:postgresql://" + dbHost + ":5432/neondb?sslmode=require";
+
+Class.forName("org.postgresql.Driver");
+con = DriverManager.getConnection(dbUrl, dbUser, dbPass);
+
     String checkQuery = "SELECT * FROM student_results WHERE roll_no = ?";
     psCheck = con.prepareStatement(checkQuery);
     psCheck.setLong(1, Long.parseLong(searchRollNo.trim()));
