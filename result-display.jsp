@@ -56,7 +56,7 @@ con = DriverManager.getConnection(dbUrl, dbUser, dbPass);
             
             <!-- 🏫 1. कॉलेज का लोगो कंटेनर -->
             <div class="logo-container">
-            <img src="screenshots/resultlogo.png" alt="Result Logo">
+            <img src="screenshots/resultlogo.png" class="marksheet-logo" alt="Result Logo">
             </div>
             
             <h2 class="marksheet-title">EduScore Portal - Examination Result</h2>
