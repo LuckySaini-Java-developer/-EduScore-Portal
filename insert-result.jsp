@@ -61,7 +61,7 @@ String dbPass = System.getenv("DB_PASSWORD");
 String dbUrl = "jdbc:postgresql://" + dbHost + ":5432/neondb?sslmode=require";
 
 Class.forName("org.postgresql.Driver");
-Connection con = DriverManager.getConnection(dbUrl, dbUser, dbPass);
+con = DriverManager.getConnection(dbUrl, dbUser, dbPass);
 
     // 🔥 जादू यहाँ है: INSERT से पहले SELECT करके चेक करना
     String checkQuery = "SELECT roll_no FROM student_results WHERE roll_no = ?";
